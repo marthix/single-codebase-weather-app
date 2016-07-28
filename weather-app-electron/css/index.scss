@@ -1,0 +1,133 @@
+$lightBlue:           #bcf8ff;
+$blue:                #0095ba;
+$darkBlue:            #2287a3;
+$white:               #fdfcf7;
+$font:                'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background-color: $blue;
+  background-image: -webkit-linear-gradient(top, $lightBlue, $blue);
+  background-image:    -moz-linear-gradient(top, $lightBlue, $blue);
+  background-image:      -o-linear-gradient(top, $lightBlue, $blue);
+  background-image:         linear-gradient(to bottom, $lightBlue, $blue);
+  padding: 5%;
+  font-family: $font;
+  color: $darkBlue;
+
+}
+
+.container {
+    max-width: 810px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+}
+
+header {
+    h1 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+    h3 {
+        margin: 0;
+        font-weight: lighter;
+    }
+}
+
+main {
+    text-align: center;
+    flex: 1;
+    margin-top: 50px;
+
+    h1 {
+        font-size: 130px;
+        margin: 0;
+    }
+    h2 {
+        margin: 0;
+        color: $lightBlue;
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+}
+
+.five-day-forecast {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+
+    li {
+        display: inline-block;
+        // float: left;
+        padding: 50px;
+    }
+
+    h3 {
+        color: $white;
+        font-size: 40px;
+        margin: 10px 0 0;
+    }
+}
+
+.owf {
+    color: $lightBlue;
+}
+
+@media screen and (max-width: 915px) {
+    .five-day-forecast {
+        li {
+            padding: 30px;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        text-align: center;
+        flex: 1;
+
+        h1 {
+            padding-top: 10px;
+        }
+    }
+
+    main {
+        flex: 2;
+        margin-top: 0;
+    }
+
+    .five-day-forecast {
+        li {
+            padding: 5px;
+            padding-top: 40px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
